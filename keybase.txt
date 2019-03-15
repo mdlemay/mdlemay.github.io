@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/lemaymd
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://m.lemays.org
+  * I am lemaymd (https://keybase.io/lemaymd) on keybase.
+  * I have a public key ASDzECC3cXiYsy7LECmUj3GpJ56iyKI87SkpALtTAp9zZwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f31020b7717898b32ecb1029948f71a9279ea2c8a23ced292900bb53029f73670a",
+      "host": "keybase.io",
+      "kid": "0120f31020b7717898b32ecb1029948f71a9279ea2c8a23ced292900bb53029f73670a",
+      "uid": "0a93ba91fd3f3e7c3f11af192842ae19",
+      "username": "lemaymd"
+    },
+    "merkle_root": {
+      "ctime": 1552621497,
+      "hash": "289dcfaf340793e733ab525707e2aa167a44557b420f7a7f14ddd850414689e27dc9fbf6a1812ada0a91ef60c54339b97262c16bdd0b87d0b41f191ea47feecf",
+      "hash_meta": "2d143a17c549cdd8dae616544c6d378664b157c5ce1df9588b92aabb8ccde703",
+      "seqno": 4953284
+    },
+    "service": {
+      "entropy": "ByWE9dDcwD0bCPjkfsmdCL7T",
+      "hostname": "m.lemays.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.1.2"
+  },
+  "ctime": 1552621509,
+  "expire_in": 504576000,
+  "prev": "3d82e28cb39f8e56d90f482489f880fec9104a17feb2f26d286d1821e42497b1",
+  "seqno": 4,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg8xAgt3F4mLMuyxAplI9xqSeeosiiPO0pKQC7UwKfc2cKp3BheWxvYWTESpcCBMQgPYLijLOfjlbZD0gkifiA/skQShf+svJtKG0YIeQkl7HEIP0sz5A9UjyDIJiNQkrwi56vuwu+m/nGXdOgXSCY+axdAgHCo3NpZ8RA6p2U6t/19hC3fO/n/SiJLb7r2foXSno2/2kD9Mi9wjapZn9JcK+tS2k4xlRBIBrf7pzurmIL4w7FNJTcO4k6BqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIPuBeJecag9NAJpkIHFnau2S3jCPBfvB5DC9YUlfKgezo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/lemaymd
+
+==================================================================
