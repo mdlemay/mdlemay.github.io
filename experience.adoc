@@ -23,7 +23,7 @@ As part of that role, I participate in the https://newsroom.intel.com/corporate/
 
 My research has generated or influenced hardware and software security architectures deployed on a large proportion of computer systems in use today.
 
-I have contributed to shipping processor security technologies, including https://www.forbes.com/sites/tonybradley/2020/06/17/intel-cet-raises-the-bar-for-malware-defense/[Control-Flow Enforcement Technology (CET)] and https://www.pcworld.com/article/619047/intels-12th-gen-vpro-chips-now-actively-fight-ransomware-supply-chain-attacks.html[VT-Redirect Protection (VT-rp)].
+I have contributed to shipping processor security technologies, including https://www.forbes.com/sites/tonybradley/2020/06/17/intel-cet-raises-the-bar-for-malware-defense/[Control-Flow Enforcement Technology (CET)] and https://www.pcworld.com/article/619047/intels-12th-gen-vpro-chips-now-actively-fight-ransomware-supply-chain-attacks.html[VT-Redirect Protection (VT-rp)]. Such technologies are important for https://www.intel.com/content/www/us/en/security/security-practices/blogs/software-robustness-when-ai-finds-the-bugs.html[mitigating AI-generated exploits].
 
 I was Principal Investigator for https://web.archive.org/web/20240917132526/https://www.intel.com/content/www/us/en/newsroom/news/intel-and-ucsd-join-darpa-cyberdefense-program.html[Intel's project on Cryptographic Capability Computing (C3)] in the https://www.darpa.mil/news-events/2022-10-13[DARPA HARDEN program].
 
@@ -39,13 +39,15 @@ I also researched approaches for scalable isolation, for example using https://p
 
 University of Illinois at Urbana-Champaign, August 2011.
 
-Advised by http://cgunter.cs.illinois.edu/[Prof. Carl A. Gunter].
-
-https://web.archive.org/web/20090412061630/http://www.uwec.edu/newsreleases/highlights/041305LeMay.htm[National Defense Science and Engineering Graduate (NDSEG) Fellow].
+Ph.D. dissertation: https://www.ideals.illinois.edu/items/26240[Compact Integrity-Aware Architectures]. Committee:
+* http://cgunter.cs.illinois.edu/[Prof. Carl A. Gunter] (advisor)
+* https://sadve.cs.illinois.edu/[Prof. Sarita V. Adve]
+* https://engineering.ucdavis.edu/people/samuel-king[Prof. Samuel T. King]
+* https://www.csl.sri.com/~neumann/[Dr. Peter G. Neumanna]
 
 M.S. thesis: http://seclab.illinois.edu/wp-content/uploads/2011/03/LeMayMSThesis.pdf[Dependable Emergency-Response Networking Based on Retaskable Network Infrastructures].
 
-https://www.ideals.illinois.edu/items/26240[Ph.D. dissertation: Compact Integrity-Aware Architectures].
+https://web.archive.org/web/20090412061630/http://www.uwec.edu/newsreleases/highlights/041305LeMay.htm[National Defense Science and Engineering Graduate (NDSEG) Fellow].
 
 Postdoc through May 2012.
 
