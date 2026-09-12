@@ -10,7 +10,11 @@
   <author>
     <name>{{ site.author | xml_escape }}</name>
   </author>
-  {% assign items = site.posts | where_exp: "post", "post.tags contains page.feed_tag" %}
+  {% assign tag_name = page.feed_tag %}
+  {% assign items = site.tags[tag_name] %}
+  {% if items == nil %}
+    {% assign items = "" | split: "" %}
+  {% endif %}
   {% for post in items %}
   <entry>
     <title type="html">{{ post.title | xml_escape }}</title>
