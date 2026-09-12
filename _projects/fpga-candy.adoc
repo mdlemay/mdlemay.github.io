@@ -1,0 +1,8 @@
+---
+layout: project
+title: FPGA-powered candy dispenser
+date: 2020-07-02
+summary: Touchless dispensing with a photoresistor sensor and a PWM-controlled servo
+external_link: https://www.hackster.io/mdlemay/fpga-powered-candy-dispenser-f8ad7f
+permalink: /project/fpga-candy/
+---

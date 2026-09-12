@@ -1,0 +1,20 @@
+---
+layout: publication
+title: 'Segue & ColorGuard: Optimizing SFI Performance and Scalability on Modern x86'
+date: 2022-12-12
+authors:
+- Shravan Narayan
+- Tal Garfinkel
+- Evan Johnson
+- David Thien
+- Joey Rudek
+- Michael LeMay
+- Anjo Vahldiek-Oberwagner
+- Dean Tullsen
+- Deian Stefan
+publication: 17th Workshop on Programming Languages and Analysis for Security
+publication_short: Programming Languages and Analysis for Security (PLAS)
+url_pdf: https://plas2022.github.io/files/pdf/SegueColorGuard.pdf
+featured: false
+permalink: /publication/plas22/
+---

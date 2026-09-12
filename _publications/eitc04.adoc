@@ -1,0 +1,14 @@
+---
+layout: publication
+title: Comprehensive message control and assurance with the secure email transport
+  protocol
+date: 2004-08-26
+authors:
+- Michael D. LeMay
+- Jack S.E. Tan
+publication: IEEE Electro/Information Technology Conference
+publication_short: Electro/Information Technology (EIT)
+doi: https://doi.org/10.1109/EIT.2004.4569392
+featured: false
+permalink: /publication/eitc04/
+---

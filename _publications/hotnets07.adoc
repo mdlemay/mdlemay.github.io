@@ -1,0 +1,14 @@
+---
+layout: publication
+title: Supporting Emergency-Response by Retasking Network Infrastructures
+date: 2007-11-01
+authors:
+- Michael LeMay
+- Carl A. Gunter
+publication: Hot Topics in Networks
+publication_short: HotNets
+url_pdf: http://conferences.sigcomm.org/hotnets/2007/papers/hotnets6-final16.pdf
+url_slides: http://seclab.illinois.edu/wp-content/uploads/2011/03/LeMayG07-hotnets.ppt
+featured: false
+permalink: /publication/hotnets07/
+---

@@ -1,0 +1,18 @@
+---
+layout: publication
+title: 'Sh@re: Negotiated audit in social networks'
+date: 2009-10-11
+authors:
+- Alejandro Gutierrez
+- Apeksha Godiyal
+- Matt Stockton
+- Michael LeMay
+- Carl A. Gunter
+- Roy H. Campbell
+publication: IEEE International Conference on Systems, Man and Cybernetics
+publication_short: Systems, Man and Cybernetics (SMC)
+doi: https://ieeexplore.ieee.org/abstract/document/5779094
+url_pdf: http://seclab.illinois.edu/wp-content/uploads/2011/03/GutierrezGSLGC09.pdf
+featured: false
+permalink: /publication/smc09/
+---

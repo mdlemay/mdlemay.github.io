@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="page">
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+  </header>
+  <div class="prose">
+    {{ content }}
+    <ul class="plain-list">
+      {% assign projects = site.projects | sort: "date" | reverse %}
+      {% for project in projects %}
+        <li>
+          <p class="citation">
+            {% if project.external_link %}
+              <a href="{{ project.external_link }}">{{ project.title }}</a>
+            {% else %}
+              <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+            {% endif %}
+            <span class="meta"> · {{ project.date | date: "%Y" }}</span>
+          </p>
+          {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>

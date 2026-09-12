@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="page">
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+  </header>
+  <div class="prose">
+    {{ content }}
+    {% assign items = site.posts | where_exp: "post", "post.tags contains page.tag" %}
+    {% if items.size == 0 %}
+      <p>No posts in this category yet.</p>
+    {% else %}
+      <ul class="plain-list">
+        {% for post in items %}
+          <li>
+            <p class="citation">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <span class="meta"> · {{ post.date | date: "%B %-d, %Y" }}</span>
+            </p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <p><a href="{{ page.feed_path | relative_url }}">Atom feed</a></p>
+  </div>
+</article>

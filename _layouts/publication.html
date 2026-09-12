@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<article class="page">
+  <header class="page-header">
+    <p class="meta">{{ page.date | date: "%Y" }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.authors %}
+      <p class="lede">{{ page.authors | join: ", " }}</p>
+    {% endif %}
+  </header>
+  <div class="prose">
+    {% if page.publication %}
+      <p><em>{{ page.publication }}</em>{% if page.publication_short %} ({{ page.publication_short }}){% endif %}.</p>
+    {% endif %}
+    <p class="link-row">
+      {% if page.url_pdf %}<a href="{{ page.url_pdf }}">PDF</a>{% endif %}
+      {% if page.doi %}
+        {% assign doi_href = page.doi %}
+        {% unless doi_href contains "://" %}
+          {% assign doi_href = page.doi | prepend: "https://doi.org/" %}
+        {% endunless %}
+        <a href="{{ doi_href }}">DOI</a>
+      {% endif %}
+      {% if page.url_video %}<a href="{{ page.url_video }}">Video</a>{% endif %}
+      {% if page.url_slides %}<a href="{{ page.url_slides }}">Slides</a>{% endif %}
+      {% if page.url_code %}<a href="{{ page.url_code }}">Code</a>{% endif %}
+    </p>
+    {{ content }}
+  </div>
+</article>

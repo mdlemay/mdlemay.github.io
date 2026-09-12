@@ -1,0 +1,17 @@
+---
+layout: publication
+title: 'The Endokernel: Fast, Secure, and Programmable Subprocess Virtualization'
+date: 2021-08-10
+authors:
+- Bumjin Im
+- Fangfei Yang
+- Chia-Che Tsai
+- Michael LeMay
+- Anjo Vahldiek-Oberwagner
+- Nathan Dautenhahn
+publication: arXiv
+publication_short: arXiv
+url_pdf: https://arxiv.org/pdf/2108.03705.pdf
+featured: false
+permalink: /publication/endokernel21/
+---

@@ -1,0 +1,6 @@
+---
+layout: projects
+title: Projects
+permalink: /projects/
+---
+Selected software, hardware, and research prototypes.

@@ -1,0 +1,12 @@
+---
+layout: talk
+title: 'Keynote: Lightening the Shadows: Metadata-Light Exploit Mitigation Based on
+  Novel Cryptography and X86'
+date: '2024-11-02T13:00:00Z'
+event: The International Workshop on Hardware and Architectural Support for Security
+  and Privacy (HASP) 2024
+event_url: https://haspworkshop.org/2024/index.html
+url_slides: https://haspworkshop.org/2024/slides/Keynote%203.pdf
+featured: true
+permalink: /event/hasp-keynote24/
+---

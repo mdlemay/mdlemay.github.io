@@ -1,0 +1,29 @@
+---
+layout: publication
+title: 'Going beyond the Limits of SFI: Flexible and Secure Hardware-Assisted In-Process
+  Isolation with HFI (distinguished paper award, Intel Hardware Security Academic
+  Award honorable mention 🏆)'
+date: 2023-03-25
+authors:
+- Shravan Narayan
+- Tal Garfinkel
+- Mohammadkazem Taram
+- Joey Rudek
+- Daniel Moghimi
+- Evan Johnson
+- Chris Fallin
+- Anjo Vahldiek-Oberwagner
+- Michael LeMay
+- Ravi Sahita
+- Dean Tullsen
+- Deian Stefan
+publication: 28th ACM International Conference on Architectural Support for Programming
+  Languages and Operating Systems
+publication_short: Architectural Support for Programming Languages and Operating Systems
+  (ASPLOS)
+doi: 10.1145/3582016.3582023
+url_pdf: https://dl.acm.org/doi/pdf/10.1145/3582016.3582023
+url_video: https://youtu.be/2vi1KxBdfY4
+featured: true
+permalink: /publication/asplos23/
+---

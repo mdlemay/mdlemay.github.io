@@ -1,0 +1,18 @@
+---
+layout: publication
+title: An Integrated Architecture for Demand Response Communications and Control (best
+  paper award 🏆)
+date: 2008-01-07
+authors:
+- Michael LeMay
+- Rajesh Nelli
+- George Gross
+- Carl A. Gunter
+publication: 41st Hawaii International Conference on System Sciences
+publication_short: Hawaii International Conference on System Sciences (HICSS)
+doi: https://doi.org/10.1109/HICSS.2008.60
+url_pdf: http://seclab.illinois.edu/wp-content/uploads/2011/03/LeMayNGG08.pdf
+url_slides: http://seclab.illinois.edu/wp-content/uploads/2011/03/LeMayNGG08.ppt
+featured: false
+permalink: /publication/hicss08/
+---

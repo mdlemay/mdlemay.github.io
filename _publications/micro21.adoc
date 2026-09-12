@@ -1,0 +1,23 @@
+---
+layout: publication
+title: Cryptographic Capability Computing
+date: 2021-10-19
+authors:
+- Michael LeMay
+- Joydeep Rakshit
+- Sergej Deutsch
+- David M. Durham
+- Santosh Ghosh
+- Anant Nori
+- Jayesh Gaur
+- Andrew Weiler
+- Salmin Sultana
+- Karanvir Grewal
+- Sreenivas Subramoney
+publication: 54th IEEE/ACM International Symposium on Microarchitecture
+publication_short: MICRO
+doi: 10.1145/3466752.3480076
+url_pdf: https://dl.acm.org/doi/pdf/10.1145/3466752.3480076
+featured: true
+permalink: /publication/micro21/
+---

@@ -1,0 +1,24 @@
+---
+layout: publication
+title: 'Hardware-Assisted Fault Isolation: Going Beyond the Limits of Software-Based
+  Sandboxing (top picks 🏆)'
+date: 2024-07-09
+authors:
+- Shravan Narayan
+- Tal Garfinkel
+- Mohammadkazem Taram
+- Joey Rudek
+- Daniel Moghimi
+- Evan Johnson
+- Chris Fallin
+- Anjo Vahldiek-Oberwagner
+- Michael LeMay
+- Ravi Sahita
+- Dean Tullsen
+- Deian Stefan
+publication: IEEE Micro Volume 44, Issue 4
+publication_short: IEEE Micro Top Picks 2024
+doi: 10.1109/MM.2024.3422977
+featured: true
+permalink: /publication/microtoppicks24/
+---

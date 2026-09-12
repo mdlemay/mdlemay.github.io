@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<section class="hero">
+  <img class="avatar" src="{{ '/assets/images/avatar.jpg' | relative_url }}" alt="Portrait of Michael LeMay" width="160" height="160">
+  <div>
+    <p class="eyebrow">Principal Engineer</p>
+    <h1>Michael LeMay</h1>
+    <p class="lede"><a href="https://www.intel.com">Intel</a></p>
+    <p class="social">
+      <a href="mailto:m@lemays.org">Email</a>
+      <a href="https://scholar.google.com/citations?user=c7kQkOQAAAAJ">Scholar</a>
+      <a href="https://orcid.org/0000-0001-6206-9642">ORCID</a>
+      <a href="https://github.com/mdlemay">GitHub</a>
+      <a href="https://www.linkedin.com/in/lemaymd/">LinkedIn</a>
+      <a href="https://x.com/lemaymd">X</a>
+      <a href="https://keybase.io/lemaymd">Keybase</a>
+    </p>
+  </div>
+</section>
+
+<div class="prose">
+  {{ content }}
+</div>
+
+<section class="stack">
+  <h2>Featured publications</h2>
+  <ul class="plain-list">
+    {% assign featured = site.publications | where: "featured", true | sort: "date" | reverse %}
+    {% for pub in featured %}
+      <li>{% include citation.html item=pub %}</li>
+    {% endfor %}
+  </ul>
+  <p><a href="{{ '/publication/' | relative_url }}">All publications</a></p>
+</section>
+
+<section class="stack">
+  <h2>Talks</h2>
+  <ul class="plain-list">
+    {% assign talks = site.talks | sort: "date" | reverse %}
+    {% for talk in talks %}
+      <li>
+        <a href="{{ talk.url | relative_url }}">{{ talk.title }}</a>
+        <span class="meta"> · {{ talk.date | date: "%b %-d, %Y" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="stack">
+  <h2>Posts</h2>
+  <p>I post a mix of professional and personal notes. Separate Atom feeds are generated for each category, and there is also a combined feed:</p>
+  <ul>
+    <li><a href="{{ '/feed/professional.xml' | relative_url }}">Professional feed</a> — <a href="{{ '/tags/professional/' | relative_url }}">archive</a></li>
+    <li><a href="{{ '/feed/personal.xml' | relative_url }}">Personal feed</a> — <a href="{{ '/tags/personal/' | relative_url }}">archive</a></li>
+    <li><a href="{{ '/feed.xml' | relative_url }}">Combined feed</a> — <a href="{{ '/posts/' | relative_url }}">archive</a></li>
+  </ul>
+  <ul class="plain-list">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="meta"> · {{ post.date | date: "%b %-d, %Y" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

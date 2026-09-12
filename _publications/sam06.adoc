@@ -1,0 +1,16 @@
+---
+layout: publication
+title: Acoustic Surveillance of Physically Unmodified PCs
+date: 2006-06-01
+authors:
+- Michael LeMay
+- Jack Tan
+publication: CSREA Security and Management
+publication_short: Security and Management (SAM)
+url_pdf: http://seclab.illinois.edu/wp-content/uploads/2011/03/LeMayT06.pdf
+url_slides: http://seclab.illinois.edu/wp-content/uploads/2011/03/LeMayT06.ppt
+featured: false
+permalink: /publication/sam06/
+---
+
+DBLP Entry: https://dblp.org/rec/conf/csreaSAM/LeMayT06

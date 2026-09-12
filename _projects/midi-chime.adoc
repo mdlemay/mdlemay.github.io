@@ -1,0 +1,9 @@
+---
+layout: project
+title: HTTP-controlled MIDI alert bell connected via Ethernet
+date: 2017-01-21
+summary: Based on Contiki OS with the lightweight X86 protection domain support that
+  I implemented.
+external_link: https://www.hackster.io/mdlemay/http-controlled-midi-alert-bell-connected-via-ethernet-b4e1cc
+permalink: /project/midi-chime/
+---

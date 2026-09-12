@@ -1,0 +1,14 @@
+---
+layout: project
+title: Memory safety with no additional metadata
+date: 2021-03-04
+summary: The Chromium team has developed BackupRefPtr, which seeks to deterministically
+  enforce temporal memory safety. I developed an extension to BackupRefPtr to also
+  deterministically enforce spatial memory safety (e.g., to mitigate buffer overflows).
+  It does not require storing any additional metadata beyond what the underlying allocator
+  already uses, although it is stateful due to needing the allocator metadata to be
+  loaded during spatial safety checks. It operates by checking that the pointer stays
+  within valid bounds any time the pointer is updated.
+external_link: https://groups.google.com/a/chromium.org/g/memory-safety-dev/c/PDi1cvAvUGc
+permalink: /project/mem-safety/
+---

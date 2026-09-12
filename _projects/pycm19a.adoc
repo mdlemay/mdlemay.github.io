@@ -1,0 +1,9 @@
+---
+layout: project
+title: Python X10 CM19A driver (unofficial)
+date: 2017-01-16
+summary: Unofficial driver for the X10 CM19A remote control interface in Python, now
+  maintained by Burns Fisher.
+external_link: https://github.com/burnsfisher/x10pantilt
+permalink: /project/pycm19a/
+---

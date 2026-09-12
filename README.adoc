@@ -1,0 +1,27 @@
+= Michael LeMay
+
+Personal site for https://m.lemays.org/[m.lemays.org], built with https://jekyllrb.com/[Jekyll] and https://asciidoctor.org/[AsciiDoc] and hosted on GitHub Pages.
+
+== Local preview
+
+----
+bundle install
+bundle exec jekyll serve
+----
+
+Then open http://127.0.0.1:4000/.
+
+== Publishing
+
+GitHub Pages cannot run `jekyll-asciidoc` with its built-in Jekyll builder, so this repository uses a GitHub Actions workflow to build and deploy.
+
+In the repository settings, set *Pages → Source* to *GitHub Actions*.
+After the first successful workflow run, point the `m.lemays.org` DNS records at GitHub Pages if they still target the previous host.
+
+== Editing content
+
+* Pages live at the repository root as `.adoc` files.
+* Papers are in `_publications/`.
+* Posts are in `_posts/`. Tag a post `personal` or `professional` to include it in that category feed.
+* Talks are in `_talks/`.
+* Projects are in `_projects/`.

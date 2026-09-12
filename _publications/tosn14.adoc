@@ -1,0 +1,17 @@
+---
+layout: publication
+title: Power-Based Diagnosis of Node Silence in Remote High-End Sensing Systems
+date: 2014-12-01
+authors:
+- Yong Yang
+- Lu Su
+- Mohammad Maifi Khan
+- Michael LeMay
+- Tarek F. Abdelzaher
+- Jiawei Han
+publication: ACM Transactions on Sensor Networks (ToSN)
+doi: https://doi.org/10.1145/2661639
+url_pdf: http://seclab.illinois.edu/wp-content/uploads/2014/12/YangSKLAH14.pdf
+featured: false
+permalink: /publication/tosn14/
+---

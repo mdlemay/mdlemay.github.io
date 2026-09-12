@@ -1,0 +1,22 @@
+---
+layout: publication
+title: 'Isolation without Taxation: Near-Zero-Cost Transitions for WebAssembly and
+  SFI'
+date: 2022-01-12
+authors:
+- Matthew Kolosick
+- Shravan Ravi Narayan
+- Evan Johnson
+- Conrad Watt
+- Michael LeMay
+- Deepak Garg
+- Ranjit Jhala
+- Deian Stefan
+publication: 49th ACM SIGPLAN Symposium on Principles of Programming Languages
+publication_short: Principles of Programming Languages (POPL)
+doi: 10.1145/3498688
+url_pdf: https://dl.acm.org/doi/pdf/10.1145/3498688
+url_video: https://popl22.sigplan.org/details/POPL-2022-popl-research-papers/27/Isolation-without-Taxation-Near-Zero-Cost-Transitions-for-WebAssembly-and-SFI
+featured: false
+permalink: /publication/popl22/
+---

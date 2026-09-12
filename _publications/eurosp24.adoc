@@ -1,0 +1,20 @@
+---
+layout: publication
+title: Memory Tagging using Cryptographic Memory Integrity on Commodity x86 CPUs (runner-up
+  for distinguished paper award 🏆)
+date: 2024-07-10
+authors:
+- David Schrammel
+- Martin Unterguggenberger
+- Lukas Lamster
+- Salmin Sultana
+- Karanvir Grewal
+- Michael LeMay
+- David M. Durham
+- Stefan Mangard
+publication: 9th IEEE European Symposium on Security and Privacy
+publication_short: European Symposium on Security and Privacy (Euro S&P)
+url_pdf: https://graz.elsevierpure.com/files/79813446/integritag_cr.pdf
+featured: false
+permalink: /publication/eurosp24/
+---

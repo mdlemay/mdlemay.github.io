@@ -1,0 +1,9 @@
+---
+layout: project
+title: Using Intel MPX or segmentation to harden SafeStack
+date: 2017-02-07
+summary: Configuring MPX bounds registers or 32-bit segment registers and extending
+  LLVM and Clang to instrument code to help prevent corruption of the safe stacks.
+external_link: https://lists.llvm.org/pipermail/llvm-dev/2017-February/109933.html
+permalink: /project/safestack-mpx/
+---

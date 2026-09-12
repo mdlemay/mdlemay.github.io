@@ -1,0 +1,18 @@
+---
+layout: publication
+title: 'MEMES: Memory Encryption-Based Memory Safety on Commodity Hardware'
+date: 2023-07-10
+authors:
+- David Schrammel
+- Salmin Sultana
+- Michael LeMay
+- David Durham
+- Martin Unterguggenberger
+- Pascal Nasahl
+- Stefan Mangard
+publication: 20th International Conference on Security and Cryptography
+publication_short: Security and Cryptography (SECRYPT)
+doi: 10.5220/0012050300003555
+featured: false
+permalink: /publication/secrypt23/
+---

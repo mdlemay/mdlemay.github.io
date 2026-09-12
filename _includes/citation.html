@@ -1,0 +1,14 @@
+{% assign item = include.item %}
+<p class="citation">
+  {{ item.authors | join: ", " }}
+  ({{ item.date | date: "%Y" }}).
+  <a href="{{ item.url | relative_url }}">{{ item.title }}</a>.
+  {% if item.publication_short %}
+    <em>{{ item.publication_short }}</em>.
+  {% elsif item.publication %}
+    <em>{{ item.publication }}</em>.
+  {% endif %}
+  {% if item.url_pdf %}
+    <a class="cite-link" href="{{ item.url_pdf }}">PDF</a>
+  {% endif %}
+</p>

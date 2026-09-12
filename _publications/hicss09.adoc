@@ -1,0 +1,16 @@
+---
+layout: publication
+title: Collaborative Recommender Systems for Building Automation
+date: 2009-01-05
+authors:
+- Michael LeMay
+- Jason J. Haas
+- Carl A. Gunter
+publication: 42nd Hawaii International Conference on System Sciences
+publication_short: Hawaii International Conference on System Sciences (HICSS)
+doi: https://doi.org/10.1109/HICSS.2009.114
+url_pdf: http://seclab.illinois.edu/wp-content/uploads/2011/03/LeMayHG09.pdf
+url_slides: http://seclab.illinois.edu/wp-content/uploads/2011/03/LeMayHG09.ppt
+featured: false
+permalink: /publication/hicss09/
+---

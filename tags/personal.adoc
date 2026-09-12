@@ -1,0 +1,8 @@
+---
+layout: tag
+title: Personal posts
+tag: personal
+feed_path: /feed/personal.xml
+permalink: /tags/personal/
+---
+Notes tagged personal.

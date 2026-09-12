@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="site-title" href="{{ '/' | relative_url }}">Michael LeMay</a>
+    <nav aria-label="Primary">
+      <ul>
+        {% assign pages = site.header_pages %}
+        {% for path in pages %}
+          {% assign item = site.pages | where: "path", path | first %}
+          {% if item %}
+            <li>
+              <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.nav | default: item.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

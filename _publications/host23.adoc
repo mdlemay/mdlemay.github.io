@@ -1,0 +1,20 @@
+---
+layout: publication
+title: 'EC-CFI: Control-Flow Integrity via Code Encryption Counteracting Fault Attacks'
+date: 2023-05-01
+authors:
+- Pascal Nasahl
+- Salmin Sultana
+- Hans Liljestrand
+- Karanvir Grewal
+- Michael LeMay
+- David M. Durham
+- David Schrammel
+- Stefan Mangard
+publication: 16th IEEE International Symposium on Hardware Oriented Security and Trust
+  (HOST)
+publication_short: Hardware Oriented Security and Trust (HOST)
+doi: 10.1109/HOST55118.2023.10132915
+featured: false
+permalink: /publication/host23/
+---

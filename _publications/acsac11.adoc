@@ -1,0 +1,16 @@
+---
+layout: publication
+title: Reliable telemetry in white spaces using remote attestation
+date: 2011-12-01
+authors:
+- Omid Fatemieh
+- Michael LeMay
+- Carl A. Gunter
+publication: 27th Annual Computer Security Applications Conference
+publication_short: Annual Computer Security Applications Conference (ACSAC)
+doi: https://doi.org/10.1145/2076732.2076779
+url_pdf: http://seclab.illinois.edu/wp-content/uploads/2011/09/FatemiehLG11.pdf
+url_slides: http://seclab.illinois.edu/wp-content/uploads/2011/12/ACSAC11.ppt
+featured: false
+permalink: /publication/acsac11/
+---

@@ -1,0 +1,100 @@
+---
+layout: page
+title: Experience
+permalink: /experience/
+---
+== Intel Labs
+
+*Principal Engineer*, Oregon (June 2012–present)
+
+I am an architect for x86 Memory Tagging Technology (formerly known as ChkTag):
+
+* https://youtu.be/49u8xVoLhZM?si=ok9MeW6vULL21zlx[Intel Chips and Salsa episode]
+* https://www.intel.com/content/www/us/en/content-details/915147/2026-intel-platform-security-report.html[2026 Intel Platform Security Report]
+* https://community.intel.com/t5/Blogs/Tech-Innovation/open-intel/ChkTag-x86-Memory-Safety/post/1721490[Initial announcement]
+* https://www.tomshardware.com/pc-components/cpus/amd-and-intel-celebrate-first-anniversary-of-x86-alliance-new-security-features-coming-to-x86-cpus[Example press coverage]
+
+As part of that role, I participate in the https://newsroom.intel.com/corporate/october-2024-intel-news[x86 Ecosystem Advisory Group]:
+
+* https://community.intel.com/t5/Blogs/Tech-Innovation/open-intel/AMD-and-Intel-Celebrate-First-Anniversary-of-x86-Ecosystem/post/1721496[First anniversary blog post]
+* https://www.linkedin.com/posts/jeff-mcveigh-705b885_since-its-inception-the-x86-ecosystem-advisory-activity-7366537499730460673-oUol[August 2025 update]
+* https://www.linkedin.com/posts/jeff-mcveigh-705b885_collaborating-with-customers-and-competitors-activity-7351767882353029123-HMR3[July 2025 gathering]
+* https://www.linkedin.com/posts/jeff-mcveigh-705b885_amd-intel-x86-activity-7289797380386799616-wA9v[January 2025 gathering]
+
+My research has generated or influenced hardware and software security architectures deployed on a large proportion of computer systems in use today.
+
+I have contributed to shipping processor security technologies, including https://www.forbes.com/sites/tonybradley/2020/06/17/intel-cet-raises-the-bar-for-malware-defense/[Control-Flow Enforcement Technology (CET)] and https://www.pcworld.com/article/619047/intels-12th-gen-vpro-chips-now-actively-fight-ransomware-supply-chain-attacks.html[VT-Redirect Protection (VT-rp)].
+
+I was Principal Investigator for https://web.archive.org/web/20240917132526/https://www.intel.com/content/www/us/en/newsroom/news/intel-and-ucsd-join-darpa-cyberdefense-program.html[Intel's project on Cryptographic Capability Computing (C3)] in the https://www.darpa.mil/news-events/2022-10-13[DARPA HARDEN program].
+
+I https://groups.google.com/a/chromium.org/g/memory-safety-dev/c/PDi1cvAvUGc[designed] and https://groups.google.com/a/chromium.org/g/memory-safety-dev/c/1tYGORldm3w[co-developed] deterministic spatial safety support for MiraclePtr in the Chrome browser.
+
+My LLVM-based research on shielding stack memory from corruption helped lead to a 2022 paper in a top-tier programming languages conference https://www.zdnet.com/article/this-new-firefox-browser-feature-could-stop-zero-day-bugs-in-their-tracks/[covered by ZDNet].
+
+I also researched approaches for scalable isolation, for example using https://plas2022.github.io/files/pdf/SegueColorGuard.pdf[segmentation to accelerate WebAssembly] (upstreamed in https://github.com/WebAssembly/wabt/pull/2395[wasm2c]).
+
+== Education
+
+=== M.S. & Ph.D. in Computer Science
+
+University of Illinois at Urbana-Champaign, August 2011.
+
+Advised by http://cgunter.cs.illinois.edu/[Prof. Carl A. Gunter].
+
+https://web.archive.org/web/20090412061630/http://www.uwec.edu/newsreleases/highlights/041305LeMay.htm[National Defense Science and Engineering Graduate (NDSEG) Fellow].
+
+M.S. thesis: http://seclab.illinois.edu/wp-content/uploads/2011/03/LeMayMSThesis.pdf[Dependable Emergency-Response Networking Based on Retaskable Network Infrastructures].
+
+https://www.ideals.illinois.edu/items/26240[Ph.D. dissertation: Compact Integrity-Aware Architectures].
+
+Postdoc through May 2012.
+
+=== B.S. in Computer Science
+
+University of Wisconsin-Eau Claire, May 2005.
+
+UWEC Outstanding CS Senior of the Year, 2005. Karlgaard Scholarship. Summa cum laude. National Merit Scholarship Finalist.
+
+== Skills
+
+* C++
+* C
+* x86 assembly language
+* Python
+* Rust
+* LLVM/Clang
+* SMT-LIB / Z3 (completed https://coursera.org/verify/6ZWWW76MLMB5[Coursera course])
+
+== Awards
+
+* 2025 -- https://www.uwec.edu/stories/eight-be-honored-alumni-association-awards[UWEC Alumni Distinguished Achievement Award], University of Wisconsin-Eau Claire Alumni Association. "The Alumni Distinguished Achievement Award recognizes distinguished service to the community, state or nation in a manner that brings credit upon the award recipient and UW-Eau Claire."
+* 2024 -- https://www.cs.utexas.edu/news/2024/shravan-narayans-innovative-research-garners-multiple-prestigious-honors-hardware[Intel Hardware Security Academic Award Honorable Mention], for Hardware-assisted Fault Isolation (HFI)
+* 2024 -- https://m.lemays.org/publication/microtoppicks24/[IEEE MICRO Top Picks], for "Hardware-Assisted Fault Isolation: Going Beyond the Limits of Software-Based Sandboxing"
+* 2023 -- https://m.lemays.org/publication/asplos23/[ASPLOS Distinguished Paper], for "Going beyond the Limits of SFI: Flexible and Secure Hardware-Assisted In-Process Isolation with HFI"
+* 2022 -- https://awards.acm.org/award_winners/lemay_0552118[ACM Senior Member] (joined November 2011)
+* 2022 -- https://www.ieee.org/membership/senior/[IEEE Senior Member] (joined March 2013)
+* 2008 -- https://m.lemays.org/publication/hicss08/[HICSS Best Paper], for "An Integrated Architecture for Demand Response Communications and Control"
+
+== Program committees
+
+* 2025: https://popl25.sigplan.org/home/prisc-2025[Workshop on Principles of Secure Compilation (PriSC), associated with POPL 2025]
+* 2011: https://web.archive.org/web/20120208151748/http://www.trust2011.org/index.php?p=1_2_Committees[International Conference on Trust & Trustworthy Computing (TRUST)]
+* 2010: https://web.archive.org/web/20120302035702/http://www.trust2010.org/programcommittee.html[International Conference on Trust & Trustworthy Computing (TRUST)]
+
+== Mentoring
+
+* 2023–present: Lead Intel liaison for https://www.vusec.net/publications/?bib=proj_allocamelus[Allocamelus project at VUSec]. Intel https://newsroom.intel.com/corporate/intels-2025-outstanding-researcher-awards-honor-10-academic-innovators[Outstanding Researcher Award] for Prof. Cristiano Giuffrida.
+* Summer 2021, 2022, and 2023: Four mentees in the https://seas-reu.princeton.edu/[Research Experience for Undergraduates (REU) summer program].
+* 2021–2024: Lead Intel liaison for https://www.intel.com/content/www/us/en/research/blogs/resilient-architectures-and-robust-electronics.html[RARE-funded project at UCSD].
+* 2020–present: High schooler and author of an introductory book on cryptography. https://www.kgw.com/article/news/local/beaverton-student-publishes-book-on-cryptography/283-b00c6f67-79c5-4d60-990a-6e43ae94f863[TV interview].
+* 2019–2022: Intel liaison (eventually lead Intel liaison) for the DARPA-sponsored https://conix.io[SRC JUMP CONIX] center.
+* 2018–present: Multiple mentees inside Intel.
+* 2013: USAFA students on https://apps.dtic.mil/sti/tr/pdf/ADA591718.pdf[innovative usages for Intel VT-x].
+
+== Volunteering
+
+* Computer Science Category Judge at the 2020–2023 http://beavhillsciexpo.weebly.com/[NWSE Beaverton Hillsboro Science Expo]
+
+== Favorite resources
+
+* https://www.livin4ever.com/Math/index.html[Math Review lectures] by Prof. Susan Harrison (who first connected me with the UWEC CS program)

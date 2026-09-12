@@ -1,0 +1,6 @@
+---
+layout: page
+title: Page not found
+permalink: /404.html
+---
+That address is not on this site. Start from the https://m.lemays.org/[home page] or the https://m.lemays.org/publication/[publication list].

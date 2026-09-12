@@ -1,0 +1,15 @@
+---
+layout: publication
+title: Cumulative Attestation Kernels for Embedded Systems
+date: 2009-09-21
+authors:
+- Michael LeMay
+- Carl A. Gunter
+publication: 14th European Symposium on Research in Computer Security
+publication_short: European Symposium on Research in Computer Security (ESORICS)
+doi: https://doi.org/10.1007/978-3-642-04444-1_40
+url_pdf: http://seclab.illinois.edu/wp-content/uploads/2011/03/LeMayG09-esorics.pdf
+url_slides: http://seclab.illinois.edu/wp-content/uploads/2011/03/LeMayG09-esorics.ppt
+featured: false
+permalink: /publication/esorics09/
+---

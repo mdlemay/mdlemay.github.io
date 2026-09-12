@@ -1,0 +1,6 @@
+---
+layout: posts
+title: Posts
+permalink: /posts/
+---
+Notes on professional and personal topics. Feeds: https://m.lemays.org/feed/professional.xml[professional], https://m.lemays.org/feed/personal.xml[personal], and https://m.lemays.org/feed.xml[combined].

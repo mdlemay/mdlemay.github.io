@@ -1,0 +1,19 @@
+---
+layout: publication
+title: Diagnostic Powertracing for Sensor Node Failure Analysis
+date: 2010-04-12
+authors:
+- Yong Yang
+- Lu Su
+- Mohammad Khan
+- Michael LeMay
+- Tarek Abdelzaher
+- Jiawei Han
+publication: 10th ACM/IEEE International Conference on Information Processing in Sensor
+  Networks
+publication_short: Information Processing in Sensor Networks (IPSN)
+doi: https://ieeexplore.ieee.org/abstract/document/5779094
+url_pdf: http://seclab.illinois.edu/wp-content/uploads/2011/03/KhanLLMWYKAGHJ10.pdf
+featured: false
+permalink: /publication/ipsn10/
+---

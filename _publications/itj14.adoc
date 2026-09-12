@@ -1,0 +1,17 @@
+---
+layout: publication
+title: Protecting Sensor Data from Malware Attacks (pages 178-197)
+date: 2014-06-01
+authors:
+- Jonathan Edwards
+- Ken Grewal
+- Michael LeMay
+- Scott H. Robinson
+- Ravi Sahita
+- Carl Woodward
+publication: Intel Technology Journal
+publication_short: Intel Technology Journal (ITJ)
+url_pdf: https://www.intel.com/content/dam/www/public/us/en/documents/research/2014-vol18-iss-4-intel-technology-journal.pdf
+featured: false
+permalink: /publication/itj14/
+---

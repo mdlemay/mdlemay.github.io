@@ -1,0 +1,9 @@
+---
+layout: project
+title: X86 lightweight protection domain support for Contiki
+date: 2015-08-07
+summary: Memory management based on paging, software-switched segments, or hardware
+  task switching.
+external_link: https://github.com/contiki-os/contiki/tree/master/cpu/x86/mm
+permalink: /project/contiki-x86-mm/
+---

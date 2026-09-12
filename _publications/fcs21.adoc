@@ -1,0 +1,19 @@
+---
+layout: publication
+title: 'Isolation Without Taxation: Near Zero Cost Transitions for SFI'
+date: 2021-06-21
+authors:
+- Matthew Kolosick
+- Shravan Narayan
+- Evan Johnson
+- Conrad Watt
+- Michael LeMay
+- Deepak Garg
+- Ranjit Jhala
+- Deian Stefan
+publication: Workshop on Foundations of Computer Security
+publication_short: Foundations of Computer Security (FCS)
+url_pdf: https://arxiv.org/pdf/2105.00033.pdf
+featured: false
+permalink: /publication/fcs21/
+---

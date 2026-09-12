@@ -1,0 +1,8 @@
+---
+layout: tag
+title: Professional posts
+tag: professional
+feed_path: /feed/professional.xml
+permalink: /tags/professional/
+---
+Notes tagged professional.

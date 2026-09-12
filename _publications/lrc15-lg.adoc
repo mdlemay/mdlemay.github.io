@@ -1,0 +1,15 @@
+---
+layout: publication
+title: 'Network-on-Chip Firewall: Countering Defective and Malicious System-on-Chip
+  Hardware'
+date: 2015-08-27
+authors:
+- Michael LeMay
+- Carl A. Gunter
+publication: Logic, Rewriting, and Concurrency
+publication_short: Logic, Rewriting, and Concurrency (LRC)
+doi: https://doi.org/10.1007/978-3-319-23165-5_19
+url_pdf: http://seclab.illinois.edu/wp-content/uploads/2015/09/LeMayG15.pdf
+featured: false
+permalink: /publication/lrc15-lg/
+---

@@ -1,0 +1,14 @@
+---
+layout: publication
+title: Abstracting Low-Level Network Programming With ACE, a Pattern-Oriented Network
+  Programming Framework
+date: 2004-06-01
+authors:
+- Michael LeMay
+- Jack Tan
+publication: CSREA Software Engineering Research and Practice
+publication_short: Software Engineering Research and Practice (SERP)
+url_pdf: ftpr.pdf
+featured: false
+permalink: /publication/serp04/
+---

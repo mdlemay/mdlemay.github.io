@@ -1,0 +1,82 @@
+title: Michael LeMay
+tagline: Principal Engineer, Intel Labs
+description: >-
+  Personal site of Michael LeMay, a research scientist focused on
+  memory management architectures for security.
+url: https://m.lemays.org
+baseurl: ""
+author: Michael LeMay
+lang: en
+timezone: America/Los_Angeles
+
+permalink: /:title/
+markdown: kramdown
+
+plugins:
+  - jekyll-asciidoc
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.adoc
+  - vendor
+  - .ruby-version
+
+logo: /assets/images/avatar.jpg
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: publication
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
+
+collections:
+  publications:
+    output: true
+    permalink: /publication/:name/
+  projects:
+    output: true
+    permalink: /project/:name/
+  talks:
+    output: true
+    permalink: /event/:name/
+
+asciidoctor:
+  attributes:
+    idprefix: ""
+    idseparator: "-"
+    source-highlighter: rouge
+    icons: font
+    sectanchors: ""
+    relnofollow: ""
+
+feed:
+  tags: false
+  categories: false
+
+header_pages:
+  - experience.adoc
+  - publications.adoc
+  - patents.adoc
+  - talks.adoc
+  - posts.adoc
+  - projects.adoc

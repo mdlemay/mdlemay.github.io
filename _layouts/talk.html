@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article class="page">
+  <header class="page-header">
+    <p class="meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+    </p>
+    <h1>{{ page.title }}</h1>
+  </header>
+  <div class="prose">
+    {% if page.event %}
+      <p>
+        {% if page.event_url %}
+          <a href="{{ page.event_url }}">{{ page.event }}</a>
+        {% else %}
+          {{ page.event }}
+        {% endif %}
+      </p>
+    {% endif %}
+    {% if page.url_slides %}
+      <p><a href="{{ page.url_slides }}">Slides</a></p>
+    {% endif %}
+    {{ content }}
+  </div>
+</article>

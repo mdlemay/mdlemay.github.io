@@ -1,0 +1,17 @@
+---
+layout: publication
+title: 'PolicyMorph: interactive policy transformations for a logical attribute-based
+  access control framework'
+date: 2007-06-01
+authors:
+- Michael LeMay
+- Omid Fatemieh
+- Carl A. Gunter
+publication: 12th ACM Symposium on Access Control Models and Technologies
+publication_short: Symposium on Access Control Models and Technologies (SACMAT)
+doi: https://doi.org/10.1145/1266840.1266874
+url_pdf: http://seclab.illinois.edu/wp-content/uploads/2011/03/LeMayFG07.pdf
+url_slides: http://seclab.illinois.edu/wp-content/uploads/2011/03/LeMayFG07.ppt
+featured: false
+permalink: /publication/sacmat07/
+---

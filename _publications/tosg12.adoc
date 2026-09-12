@@ -1,0 +1,13 @@
+---
+layout: publication
+title: Cumulative Attestation Kernels for Embedded Systems
+date: 2012-05-24
+authors:
+- Michael LeMay
+- Carl A. Gunter
+publication: IEEE Transactions on Smart Grid (ToSG)
+doi: 10.1109/TSG.2011.2174811
+url_pdf: http://seclab.illinois.edu/wp-content/uploads/2012/07/LeMayG12.pdf
+featured: false
+permalink: /publication/tosg12/
+---
