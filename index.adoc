@@ -10,7 +10,7 @@ I am an architect for x86 https://community.intel.com/t5/Blogs/Tech-Innovation/o
 
 I have contributed to shipping processor security technologies, including https://www.forbes.com/sites/tonybradley/2020/06/17/intel-cet-raises-the-bar-for-malware-defense/[Control-Flow Enforcement Technology (CET)] and https://www.pcworld.com/article/619047/intels-12th-gen-vpro-chips-now-actively-fight-ransomware-supply-chain-attacks.html[VT-Redirect Protection (VT-rp)]. Such technologies are important for https://www.intel.com/content/www/us/en/security/security-practices/blogs/software-robustness-when-ai-finds-the-bugs.html[mitigating AI-generated exploits].
 
-See link:experience for additional information.
+See link:experience[Experience] for additional information.
 
 === Education
 
