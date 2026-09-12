@@ -6,7 +6,7 @@ permalink: /
 ---
 == About me
 
-Principal Engineer for x86 memory safety.
+https://www.intel.com[Intel] Principal Engineer for x86 memory safety.
 
 === Interests
 

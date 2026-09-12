@@ -3,7 +3,7 @@ layout: page
 title: Experience
 permalink: /experience/
 ---
-== Intel Labs
+== Intel
 
 *Principal Engineer*, Oregon (June 2012–present)
 
