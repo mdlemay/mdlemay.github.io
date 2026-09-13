@@ -41,10 +41,10 @@ University of Illinois at Urbana-Champaign, August 2011.
 
 Ph.D. dissertation: https://www.ideals.illinois.edu/items/26240[Compact Integrity-Aware Architectures]. Committee:
 
-* http://cgunter.cs.illinois.edu/[Prof. Carl A. Gunter] (advisor)
+* https://siebelschool.illinois.edu/about/people/faculty/cgunter[Prof. Carl A. Gunter] (advisor)
 * https://sadve.cs.illinois.edu/[Prof. Sarita V. Adve]
 * https://engineering.ucdavis.edu/people/samuel-king[Prof. Samuel T. King]
-* https://www.csl.sri.com/~neumann/[Dr. Peter G. Neumanna]
+* https://www.csl.sri.com/~neumann/[Dr. Peter G. Neumann]
 
 M.S. thesis: http://seclab.illinois.edu/wp-content/uploads/2011/03/LeMayMSThesis.pdf[Dependable Emergency-Response Networking Based on Retaskable Network Infrastructures].
 
