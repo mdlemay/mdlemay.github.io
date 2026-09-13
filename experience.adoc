@@ -40,6 +40,7 @@ I also researched approaches for scalable isolation, for example using https://p
 University of Illinois at Urbana-Champaign, August 2011.
 
 Ph.D. dissertation: https://www.ideals.illinois.edu/items/26240[Compact Integrity-Aware Architectures]. Committee:
+
 * http://cgunter.cs.illinois.edu/[Prof. Carl A. Gunter] (advisor)
 * https://sadve.cs.illinois.edu/[Prof. Sarita V. Adve]
 * https://engineering.ucdavis.edu/people/samuel-king[Prof. Samuel T. King]
