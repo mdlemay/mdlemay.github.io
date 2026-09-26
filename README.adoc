@@ -25,6 +25,8 @@ A scheduled workflow searches the USPTO Open Data Portal Patent File Wrapper API
 . Sign in to the https://data.uspto.gov/[USPTO Open Data Portal] with a USPTO.gov account that has multi-factor authentication enabled
 . Create an API key on the https://data.uspto.gov/apikey[Manage API Key] page
 . Add it as the repository secret `USPTO_ODP_API_KEY`
+. In https://github.com/mdlemay/mdlemay.github.io/settings[Settings → General], under *Features*, enable *Issues* and *Pull requests*
+. In https://github.com/mdlemay/mdlemay.github.io/settings/actions[Settings → Actions → General], under *Workflow permissions*, enable *Allow GitHub Actions to create and approve pull requests*
 . The workflow runs on the 1st of each month and can also be started from the *Actions* tab
 
 To run locally, install the dependencies with `pip install -r .github/scripts/requirements.txt` and set `USPTO_ODP_API_KEY`.
