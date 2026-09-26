@@ -18,6 +18,21 @@ GitHub Pages cannot run `jekyll-asciidoc` with its built-in Jekyll builder, so t
 In the repository settings, set *Pages → Source* to *GitHub Actions*.
 After the first successful workflow run, point the `m.lemays.org` DNS records at GitHub Pages if they still target the previous host.
 
+== Monthly patent scan
+
+A scheduled workflow searches the USPTO Open Data Portal Patent File Wrapper API for new US patents and published applications that list Michael LeMay as an inventor and Intel as the applicant or assignee. If it finds listings that are not already on `patents.adoc`, it opens a pull request. When a newly granted patent is the first issuance of a currently listed application, that application row is removed.
+
+. Sign in to the https://data.uspto.gov/[USPTO Open Data Portal] with a USPTO.gov account that has multi-factor authentication enabled
+. Create an API key on the https://data.uspto.gov/apikey[Manage API Key] page
+. Add it as the repository secret `USPTO_ODP_API_KEY`
+. The workflow runs on the 1st of each month and can also be started from the *Actions* tab
+
+To run locally, install the dependencies with `pip install -r .github/scripts/requirements.txt` and set `USPTO_ODP_API_KEY`.
+Run the scanner with `python .github/scripts/sync_patents.py`.
+To compare the broad and narrowed server-side filters without changing `patents.adoc`, run `python .github/scripts/diagnose_patents.py`. The same diagnostic is available when manually starting the workflow from the *Actions* tab.
+
+The executable scripts in `.github/scripts/` are licensed under the https://opensource.org/license/mit[MIT License] (see `.github/scripts/LICENSE`). Other files in this repository are not covered by that license.
+
 == Editing content
 
 * Pages live at the repository root as `.adoc` files.

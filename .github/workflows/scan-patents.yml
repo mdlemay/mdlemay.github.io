@@ -1,0 +1,60 @@
+name: Scan new patents
+
+on:
+  schedule:
+    - cron: "0 16 1 * *"
+  workflow_dispatch:
+    inputs:
+      diagnose_query:
+        description: Compare broad and narrowed USPTO query results without updating patents
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: scan-patents
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r .github/scripts/requirements.txt
+
+      - name: Scan USPTO
+        id: scan
+        if: github.event_name != 'workflow_dispatch' || inputs.diagnose_query != true
+        env:
+          USPTO_ODP_API_KEY: ${{ secrets.USPTO_ODP_API_KEY }}
+          PATENT_PR_BODY_PATH: ${{ runner.temp }}/patent-pr-body.md
+        run: python .github/scripts/sync_patents.py
+
+      - name: Diagnose USPTO query
+        if: github.event_name == 'workflow_dispatch' && inputs.diagnose_query == true
+        env:
+          USPTO_ODP_API_KEY: ${{ secrets.USPTO_ODP_API_KEY }}
+        run: python .github/scripts/diagnose_patents.py
+
+      - name: Open pull request
+        if: steps.scan.outputs.updated == 'true'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Add newly published patents
+          branch: bot/patents-update
+          delete-branch: true
+          title: Add newly published patents
+          body-path: ${{ runner.temp }}/patent-pr-body.md
+          add-paths: patents.adoc
