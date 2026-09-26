@@ -180,7 +180,10 @@ def insert_lines(section: str, new_lines: list[str]) -> str:
 
 def preserve_final_newline(original: str, lines: list[str]) -> str:
     text = "\n".join(lines)
-    return text + "\n" if original.endswith("\n") and not text.endswith("\n") else text
+    trailing_newlines = len(original) - len(original.rstrip("\n"))
+    if trailing_newlines:
+        return text.rstrip("\n") + ("\n" * trailing_newlines)
+    return text
 
 
 def sort_listing_section(section: str, pattern: re.Pattern[str]) -> str:

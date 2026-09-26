@@ -119,6 +119,7 @@ permalink: /patents/
 . https://patents.google.com/patent/US9124635B2/en[9,124,635 (2015): Verified sensor data processing]
 . https://patents.google.com/patent/US8458791B2/en[8,458,791 (2013): Hardware-implemented hypervisor for root-of-trust monitoring and control of computer system]
 . https://patents.google.com/patent/US7774411B2/en[7,774,411 (2010): Secure electronic message transport protocol]
+
 == Published patent applications
 
 . https://patents.google.com/patent/US20260252243A1/en[19/253,812: EFFICIENT TAG CHECKING FOR DYNAMICALLY REPEATING MEMORY ACCESSES]
