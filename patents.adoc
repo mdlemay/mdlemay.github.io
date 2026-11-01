@@ -6,6 +6,7 @@ permalink: /patents/
 
 == Issued patents
 
+. https://patents.google.com/patent/US12754853B2/en[12,754,853 (2026): Circuitry and methods for implementing forward-edge control-flow integrity (fecfi) using one or more capability-based instructions]
 . https://patents.google.com/patent/US12705057B2/en[12,705,057 (2026): Circuitry and methods for implementing capabilities using narrow registers]
 . https://patents.google.com/patent/US12704991B2/en[12,704,991 (2026): Circuitry and methods for implementing capability-based compartment switches with descriptors]
 . https://patents.google.com/patent/US12669947B2/en[12,669,947 (2026): Memory safety with single memory tag per allocation]
@@ -141,7 +142,6 @@ permalink: /patents/
 . https://patents.google.com/patent/US20250005138A1/en[18/346,222: EXPLICIT INTEGRITY CHECK VALUE INITIALIZATION]
 . https://patents.google.com/patent/US20240354108A1/en[18/478,882: MEMORY SAFETY USING TAG CHECKING INSTRUCTIONS AND ISLANDS OF TAGS IN LINE WITH BUCKETED DATA]
 . https://patents.google.com/patent/US20240333501A1/en[18/194,553: MULTI-KEY MEMORY ENCRYPTION PROVIDING EFFICIENT ISOLATION FOR MULTITHREADED PROCESSES]
-. https://patents.google.com/patent/US20240330000A1/en[18/194,086: CIRCUITRY AND METHODS FOR IMPLEMENTING FORWARD-EDGE CONTROL-FLOW INTEGRITY (FECFI) USING ONE OR MORE CAPABILITY-BASED INSTRUCTIONS]
 . https://patents.google.com/patent/US20240104027A1/en[17/953,186: TEMPORAL INFORMATION LEAKAGE PROTECTION MECHANISM FOR CRYPTOGRAPHIC COMPUTING]
 . https://patents.google.com/patent/US20240104013A1/en[17/936,011: DETERMINISTIC ADJACENT OVERFLOW DETECTION FOR SLOTTED MEMORY POINTERS]
 . https://patents.google.com/patent/US20240095063A1/en[17/949,353: USER-LEVEL EXCEPTION-BASED INVOCATION OF SOFTWARE INSTRUMENTATION HANDLERS]
