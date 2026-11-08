@@ -70,6 +70,7 @@ UWEC Outstanding CS Senior of the Year, 2005. Karlgaard Scholarship. Summa cum l
 
 == Awards
 
+* 2026 -- https://www.intel.com/content/www/us/en/security/security-practices/hardware-security-award-2026.html[Intel Hardware Security Academic Award Honorable Mention], for Segue & ColorGuard
 * 2025 -- https://www.uwec.edu/stories/eight-be-honored-alumni-association-awards[UWEC Alumni Distinguished Achievement Award], University of Wisconsin-Eau Claire Alumni Association. "The Alumni Distinguished Achievement Award recognizes distinguished service to the community, state or nation in a manner that brings credit upon the award recipient and UW-Eau Claire."
 * 2024 -- https://www.cs.utexas.edu/news/2024/shravan-narayans-innovative-research-garners-multiple-prestigious-honors-hardware[Intel Hardware Security Academic Award Honorable Mention], for Hardware-assisted Fault Isolation (HFI)
 * 2024 -- https://m.lemays.org/publication/microtoppicks24/[IEEE MICRO Top Picks], for "Hardware-Assisted Fault Isolation: Going Beyond the Limits of Software-Based Sandboxing"
