@@ -212,6 +212,48 @@ h3 {
   margin-top: 1rem;
 }
 
+.prose .admonitionblock {
+  margin: 2rem 0 0;
+}
+
+.prose .admonitionblock > table {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-collapse: collapse;
+  background: var(--bg-accent);
+}
+
+.prose .admonitionblock td.icon {
+  width: 1px;
+  padding: 0.9rem 0 0.9rem 1rem;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.prose .admonitionblock.note td.icon .icon-note::before {
+  content: "Note";
+  font-family: "Segoe UI", Calibri, "Helvetica Neue", sans-serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.prose .admonitionblock td.content {
+  padding: 0.75rem 1rem 0.9rem 0.85rem;
+  vertical-align: top;
+}
+
+.prose .admonitionblock td.content > :first-child {
+  margin-top: 0;
+}
+
+.prose .admonitionblock td.content > :last-child {
+  margin-bottom: 0;
+}
+
 .citation {
   margin: 0;
 }

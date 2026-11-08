@@ -35,6 +35,19 @@ To compare the broad and narrowed server-side filters without changing `patents.
 
 The executable scripts in `.github/scripts/` are licensed under the https://opensource.org/license/mit[MIT License] (see `.github/scripts/LICENSE`). Other files in this repository are not covered by that license.
 
+=== Adapting the scanner
+
+Copy `.github/scripts/` and `.github/workflows/scan-patents.yml` into the other repository. The scripts are MIT-licensed and cover US utility applications. Edit the settings at the top of `patents_common.py`: `INVENTOR_FIRST_NAME`, `INVENTOR_LAST_NAMES`, `ORGANIZATION_NAME`, `USER_AGENT`, `PATENTS_PATH`, the two section headings, and `ISSUED_KIND_CODE`. The USPTO queries and the record checks are built from those settings. Leave `ORGANIZATION_NAME` empty to keep every utility filing for the inventor. The first spelling in `INVENTOR_LAST_NAMES` is the structured query; add further spellings when the USPTO index uses more than one form of that name.
+
+The patents page needs `ISSUED_HEADING` followed later by `APPLICATIONS_HEADING`. Issued and application rows are AsciiDoc list items in this form:
+
+----
+. https://patents.google.com/patent/US12754853B2/en[12,754,853 (2026): Title]
+. https://patents.google.com/patent/US20250284832A1/en[18/946,869: TITLE]
+----
+
+Text after the application list stays where it is. Set `add-paths` in `scan-patents.yml` to the same path as `PATENTS_PATH`. Add the `USPTO_ODP_API_KEY` secret and allow GitHub Actions to open pull requests, as described above. The workflow commits that page on `bot/patents-update` at 16:00 UTC on the first day of each month.
+
 == Editing content
 
 * Pages live at the repository root as `.adoc` files.

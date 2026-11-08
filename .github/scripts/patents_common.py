@@ -15,37 +15,64 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
+# Change these settings to reuse the scanner on another site.
+INVENTOR_FIRST_NAME = "Michael"
+# The first spelling is used in the structured USPTO query. Later spellings are
+# extra inventorNameText forms for the broad diagnostic query.
+INVENTOR_LAST_NAMES = ("LeMay", "Lemay")
+# Applicant or assignee. Leave empty to keep every utility filing for the inventor.
+ORGANIZATION_NAME = "Intel"
+USER_AGENT = "mdlemay.github.io patent sync (https://github.com/mdlemay/mdlemay.github.io)"
+PATENTS_PATH = "patents.adoc"
+ISSUED_HEADING = "== Issued patents"
+APPLICATIONS_HEADING = "== Published patent applications"
+ISSUED_KIND_CODE = "B2"
+
 ODP_BASE = "https://api.uspto.gov"
 SEARCH_PATH = "/api/v1/patent/applications/search"
 ASSIGNMENT_PATH = "/api/v1/patent/applications/{application}/assignment"
 PAGE_SIZE = 25
 MAX_RECORDS = 1000
-USER_AGENT = "mdlemay.github.io patent sync (https://github.com/mdlemay/mdlemay.github.io)"
 
-BROAD_INVENTOR_QUERY = (
-    "applicationMetaData.inventorBag.inventorNameText:LeMay"
-    " OR applicationMetaData.inventorBag.inventorNameText:Lemay"
-    " OR applicationMetaData.inventorBag.lastName:LeMay"
+_INVENTOR_LAST_NAME = INVENTOR_LAST_NAMES[0]
+BROAD_INVENTOR_QUERY = " OR ".join(
+    [
+        *[
+            f"applicationMetaData.inventorBag.inventorNameText:{name}"
+            for name in INVENTOR_LAST_NAMES
+        ],
+        f"applicationMetaData.inventorBag.lastName:{_INVENTOR_LAST_NAME}",
+    ]
 )
 STRUCTURED_INVENTOR_QUERY = (
-    "(applicationMetaData.inventorBag.firstName:Michael*"
-    " AND applicationMetaData.inventorBag.lastName:LeMay)"
+    f"(applicationMetaData.inventorBag.firstName:{INVENTOR_FIRST_NAME}*"
+    f" AND applicationMetaData.inventorBag.lastName:{_INVENTOR_LAST_NAME})"
 )
 UTILITY_QUERY = (
     f"{STRUCTURED_INVENTOR_QUERY}"
     " AND applicationMetaData.applicationTypeLabelName:Utility"
 )
-APPLICANT_CLAUSE = (
-    "(applicationMetaData.firstApplicantName:Intel*"
-    " OR applicationMetaData.applicantBag.applicantNameText:Intel*)"
-)
-ASSIGNEE_CLAUSE = "assignmentBag.assigneeBag.assigneeNameText:Intel*"
-APPLICANT_QUERY = f"{STRUCTURED_INVENTOR_QUERY} AND {APPLICANT_CLAUSE}"
-ASSIGNEE_QUERY = f"{STRUCTURED_INVENTOR_QUERY} AND {ASSIGNEE_CLAUSE}"
-NARROW_QUERY = (
-    f"{STRUCTURED_INVENTOR_QUERY} AND ({APPLICANT_CLAUSE} OR {ASSIGNEE_CLAUSE})"
-)
-SEARCH_QUERY = NARROW_QUERY
+if ORGANIZATION_NAME:
+    APPLICANT_CLAUSE = (
+        f"(applicationMetaData.firstApplicantName:{ORGANIZATION_NAME}*"
+        f" OR applicationMetaData.applicantBag.applicantNameText:{ORGANIZATION_NAME}*)"
+    )
+    ASSIGNEE_CLAUSE = (
+        f"assignmentBag.assigneeBag.assigneeNameText:{ORGANIZATION_NAME}*"
+    )
+    APPLICANT_QUERY = f"{STRUCTURED_INVENTOR_QUERY} AND {APPLICANT_CLAUSE}"
+    ASSIGNEE_QUERY = f"{STRUCTURED_INVENTOR_QUERY} AND {ASSIGNEE_CLAUSE}"
+    NARROW_QUERY = (
+        f"{STRUCTURED_INVENTOR_QUERY} AND ({APPLICANT_CLAUSE} OR {ASSIGNEE_CLAUSE})"
+    )
+    SEARCH_QUERY = NARROW_QUERY
+else:
+    APPLICANT_CLAUSE = ""
+    ASSIGNEE_CLAUSE = ""
+    APPLICANT_QUERY = ""
+    ASSIGNEE_QUERY = ""
+    NARROW_QUERY = ""
+    SEARCH_QUERY = UTILITY_QUERY
 SEARCH_FIELDS = [
     "applicationNumberText",
     "applicationMetaData.applicationTypeCode",
@@ -105,31 +132,32 @@ def compact_publication_id(raw: str | None) -> str | None:
     return None
 
 
-def inventor_is_michael_lemay(inventor: dict) -> bool:
+def inventor_matches(inventor: dict) -> bool:
+    last_names = {normalize_name(name) for name in INVENTOR_LAST_NAMES}
+    first_name = normalize_name(INVENTOR_FIRST_NAME)
+
+    def matches(last: str, first: str) -> bool:
+        return last in last_names and bool(first_name) and first.startswith(first_name)
+
     last = normalize_name(inventor.get("lastName") or "")
     first = normalize_name(inventor.get("firstName") or "")
-    if last == "lemay" and first.startswith("michael"):
+    if matches(last, first):
         return True
 
     full = inventor.get("inventorNameText") or inventor.get("preferredName") or ""
     if "," in full:
         last_part, first_part = [part.strip() for part in full.split(",", 1)]
-        return normalize_name(last_part) == "lemay" and normalize_name(
-            first_part
-        ).startswith("michael")
+        return matches(normalize_name(last_part), normalize_name(first_part))
 
     tokens = [normalize_name(part) for part in full.split() if normalize_name(part)]
-    return bool(tokens) and tokens[-1] == "lemay" and tokens[0].startswith("michael")
+    return bool(tokens) and matches(tokens[-1], tokens[0])
 
 
-def record_has_michael_lemay(record: dict) -> bool:
+def record_has_inventor(record: dict) -> bool:
     meta = record.get("applicationMetaData") or {}
-    if any(
-        inventor_is_michael_lemay(inventor)
-        for inventor in meta.get("inventorBag") or []
-    ):
+    if any(inventor_matches(inventor) for inventor in meta.get("inventorBag") or []):
         return True
-    return inventor_is_michael_lemay(
+    return inventor_matches(
         {"inventorNameText": meta.get("firstInventorName") or ""}
     )
 
@@ -164,8 +192,11 @@ def inventor_names(record: dict) -> list[str]:
     return names
 
 
-def mentions_intel(names: list[str]) -> bool:
-    return any(re.search(r"\bintel\b", name, re.I) for name in names)
+def matches_organization(names: list[str]) -> bool:
+    if not ORGANIZATION_NAME:
+        return True
+    pattern = rf"\b{re.escape(ORGANIZATION_NAME)}\b"
+    return any(re.search(pattern, name, re.I) for name in names)
 
 
 def is_utility(record: dict) -> bool:
@@ -202,7 +233,10 @@ def issued_entry(record: dict) -> NewEntry | None:
     display = format_patent_number(digits)
     return NewEntry(
         kind="issued",
-        line=f". https://patents.google.com/patent/US{digits}B2/en[{display} ({year}): {title}]",
+        line=(
+            f". https://patents.google.com/patent/US{digits}{ISSUED_KIND_CODE}/en"
+            f"[{display} ({year}): {title}]"
+        ),
         sort_key=f"{year}-{digits.zfill(8)}",
         summary=f"{display} ({year}): {title}",
         application_digits=digits_only(record.get("applicationNumberText") or ""),
@@ -359,10 +393,10 @@ class UsptoClient:
             for name in names_from_record(item)
         ]
 
-    def assigned_to_intel(self, record: dict) -> bool:
-        if mentions_intel(names_from_record(record)):
+    def assigned_to_organization(self, record: dict) -> bool:
+        if matches_organization(names_from_record(record)):
             return True
         application = record.get("applicationNumberText")
-        return bool(application) and mentions_intel(
+        return bool(application) and matches_organization(
             self.assignment_names(application)
         )

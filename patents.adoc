@@ -171,3 +171,14 @@ permalink: /patents/
 . https://patents.google.com/patent/US20190050558A1/en[16/040,193: System, method and apparatus for automatic program compartmentalization]
 . https://patents.google.com/patent/US20180082057A1/en[15/273,286: Access control]
 . https://patents.google.com/patent/US20180004946A1/en[15/201,018: Regulating control transfers for execute-only code execution]
+
+[NOTE]
+====
+A scheduled GitHub Actions workflow keeps this page current.
+On the first day of each month it queries the https://data.uspto.gov/[USPTO Open Data Portal] for US patents and published applications that list Michael LeMay as an inventor and Intel as the applicant or assignee.
+Listings that are not already here are added in a pull request.
+When a newly granted patent is the first issuance of an application already listed on this page, that application is removed.
+
+The scanner and workflow are in https://github.com/mdlemay/mdlemay.github.io/tree/master/.github/scripts[`.github/scripts`] and are available under the MIT License for anyone who wants to adapt them for another site.
+Setup steps are in the https://github.com/mdlemay/mdlemay.github.io/blob/master/README.adoc#monthly-patent-scan[Monthly patent scan] section of the repository README.
+====

@@ -10,6 +10,7 @@ from patents_common import (
     ASSIGNEE_QUERY,
     BROAD_INVENTOR_QUERY,
     NARROW_QUERY,
+    ORGANIZATION_NAME,
     STRUCTURED_INVENTOR_QUERY,
     UTILITY_QUERY,
     UsptoClient,
@@ -17,10 +18,10 @@ from patents_common import (
     inventor_names,
     is_utility,
     listings_by_line,
-    mentions_intel,
+    matches_organization,
     names_from_record,
     record_entry,
-    record_has_michael_lemay,
+    record_has_inventor,
     require_api_key,
 )
 
@@ -28,10 +29,16 @@ QUERIES = [
     ("broad inventor", BROAD_INVENTOR_QUERY),
     ("structured inventor", STRUCTURED_INVENTOR_QUERY),
     ("structured + utility", UTILITY_QUERY),
-    ("structured + Intel applicant", APPLICANT_QUERY),
-    ("structured + Intel assignee", ASSIGNEE_QUERY),
-    ("combined narrow query", NARROW_QUERY),
 ]
+if ORGANIZATION_NAME:
+    QUERIES.extend(
+        [
+            (f"structured + {ORGANIZATION_NAME} applicant", APPLICANT_QUERY),
+            (f"structured + {ORGANIZATION_NAME} assignee", ASSIGNEE_QUERY),
+            ("combined narrow query", NARROW_QUERY),
+        ]
+    )
+SEARCH_LABEL = "combined narrow query" if ORGANIZATION_NAME else "structured + utility"
 
 
 def main() -> int:
@@ -48,16 +55,16 @@ def main() -> int:
     non_listable_types: dict[str, int] = {}
     assignment_cache: dict[str, list[str]] = {}
     for record in results["broad inventor"]:
-        if not record_has_michael_lemay(record) or not is_utility(record):
+        if not record_has_inventor(record) or not is_utility(record):
             continue
         application = digits_only(record.get("applicationNumberText") or "")
         local_names = names_from_record(record)
-        if not mentions_intel(local_names):
+        if not matches_organization(local_names):
             if not application:
                 continue
             if application not in assignment_cache:
                 assignment_cache[application] = client.assignment_names(application)
-            if not mentions_intel(assignment_cache[application]):
+            if not matches_organization(assignment_cache[application]):
                 continue
 
         entry = record_entry(record)
@@ -81,9 +88,7 @@ def main() -> int:
         )
         print(f"  client-valid records without a US listing: {details}")
 
-    missing = sorted(
-        set(valid_listings) - set(result_listings["combined narrow query"])
-    )
+    missing = sorted(set(valid_listings) - set(result_listings[SEARCH_LABEL]))
     print(f"\nValid US listings missing from narrow query: {len(missing)}")
     for line in missing:
         record = valid_listings[line]
@@ -105,13 +110,15 @@ def main() -> int:
             matched = line in result_listings[label]
             print(f"    matched {label}: {'yes' if matched else 'no'}")
 
+        applicant_label = f"structured + {ORGANIZATION_NAME} applicant"
+        assignee_label = f"structured + {ORGANIZATION_NAME} assignee"
         if line not in result_listings["structured inventor"]:
             reason = "structured inventor fields"
-        elif (
-            line not in result_listings["structured + Intel applicant"]
-            and line not in result_listings["structured + Intel assignee"]
+        elif ORGANIZATION_NAME and (
+            line not in result_listings[applicant_label]
+            and line not in result_listings[assignee_label]
         ):
-            reason = "Intel applicant/assignee indexing"
+            reason = f"{ORGANIZATION_NAME} applicant/assignee indexing"
         else:
             reason = "combined-query grouping or parser behavior"
         print(f"    first likely exclusion: {reason}")

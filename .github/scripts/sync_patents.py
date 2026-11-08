@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 Michael LeMay
 # SPDX-License-Identifier: MIT
-"""Add newly published Michael LeMay/Intel patents to patents.adoc."""
+"""Add newly published patents to the patents page."""
 
 from __future__ import annotations
 
@@ -12,6 +12,9 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from patents_common import (
+    APPLICATIONS_HEADING,
+    ISSUED_HEADING,
+    PATENTS_PATH,
     NewEntry,
     UsptoClient,
     application_entry,
@@ -20,7 +23,7 @@ from patents_common import (
     format_application_number,
     is_utility,
     issued_entry,
-    record_has_michael_lemay,
+    record_has_inventor,
     require_api_key,
 )
 
@@ -29,8 +32,6 @@ ISSUED_URL_RE = re.compile(r"patents\.google\.com/patent/US(\d+)B\d/", re.I)
 APPLICATION_URL_RE = re.compile(r"patents\.google\.com/patent/US(\d{11})A\d/", re.I)
 ISSUED_LABEL_RE = re.compile(r"\[([\d,]+)\s+\((\d{4})\):")
 APP_LABEL_RE = re.compile(r"\[(\d{1,2}/\d{3},\d{3}):")
-ISSUED_HEADING = "== Issued patents"
-APPS_HEADING = "== Published patent applications"
 
 
 @dataclass(frozen=True)
@@ -100,8 +101,8 @@ def select_new_entries(
     for record in records:
         if (
             not is_utility(record)
-            or not record_has_michael_lemay(record)
-            or not client.assigned_to_intel(record)
+            or not record_has_inventor(record)
+            or not client.assigned_to_organization(record)
         ):
             continue
 
@@ -205,11 +206,11 @@ def sort_listing_section(section: str, pattern: re.Pattern[str]) -> str:
 
 def split_sections(text: str) -> tuple[str, str, str, str]:
     issued_at = text.find(ISSUED_HEADING)
-    apps_at = text.find(APPS_HEADING)
+    apps_at = text.find(APPLICATIONS_HEADING)
     if issued_at < 0 or apps_at < issued_at:
-        raise RuntimeError("patents.adoc is missing the expected section headings.")
+        raise RuntimeError("The patents page is missing the expected section headings.")
     issued_end = issued_at + len(ISSUED_HEADING)
-    apps_end = apps_at + len(APPS_HEADING)
+    apps_end = apps_at + len(APPLICATIONS_HEADING)
     return (
         text[:issued_end],
         text[issued_end:apps_at],
@@ -266,7 +267,7 @@ def write_pr_body(path: Path | None, entries: list[NewEntry]) -> None:
         ),
     ]
     lines = [
-        "Monthly USPTO scan found changes for `patents.adoc`.",
+        f"Monthly USPTO scan found changes for `{PATENTS_PATH}`.",
         "",
         "Please review titles, kind codes, and links before merging.",
         "",
@@ -287,7 +288,7 @@ def write_pr_body(path: Path | None, entries: list[NewEntry]) -> None:
 
 def main() -> int:
     root = Path(__file__).resolve().parents[2]
-    patents_path = Path(os.environ.get("PATENTS_FILE") or root / "patents.adoc")
+    patents_path = Path(os.environ.get("PATENTS_FILE") or root / PATENTS_PATH)
     original = patents_path.read_text(encoding="utf-8")
     catalog = parse_catalog(original)
 

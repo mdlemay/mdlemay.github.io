@@ -60,4 +60,4 @@ jobs:
           delete-branch: true
           title: Add newly published patents
           body-path: ${{ runner.temp }}/patent-pr-body.md
-          add-paths: patents.adoc
+          add-paths: patents.adoc # Keep this in step with PATENTS_PATH.
