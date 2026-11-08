@@ -11,19 +11,19 @@ I am an architect for x86 Memory Tagging Technology (formerly known as ChkTag):
 
 * https://youtu.be/49u8xVoLhZM?si=ok9MeW6vULL21zlx[Intel Chips and Salsa episode]
 * https://www.intel.com/content/www/us/en/content-details/915147/2026-intel-platform-security-report.html[2026 Intel Platform Security Report]
-* https://community.intel.com/t5/Blogs/Tech-Innovation/open-intel/ChkTag-x86-Memory-Safety/post/1721490[Initial announcement]
+* https://web.archive.org/web/20261014020811/https://community.intel.com/t5/Blogs/Tech-Innovation/open-intel/ChkTag-x86-Memory-Safety/post/1721490[Initial announcement]
 * https://www.tomshardware.com/pc-components/cpus/amd-and-intel-celebrate-first-anniversary-of-x86-alliance-new-security-features-coming-to-x86-cpus[Example press coverage]
 
 As part of that role, I participate in the https://newsroom.intel.com/corporate/october-2024-intel-news[x86 Ecosystem Advisory Group]:
 
-* https://community.intel.com/t5/Blogs/Tech-Innovation/open-intel/AMD-and-Intel-Celebrate-First-Anniversary-of-x86-Ecosystem/post/1721496[First anniversary blog post]
+* https://web.archive.org/web/20251027130652/https://community.intel.com/t5/Blogs/Tech-Innovation/open-intel/AMD-and-Intel-Celebrate-First-Anniversary-of-x86-Ecosystem/post/1721496[First anniversary blog post]
 * https://www.linkedin.com/posts/jeff-mcveigh-705b885_since-its-inception-the-x86-ecosystem-advisory-activity-7366537499730460673-oUol[August 2025 update]
 * https://www.linkedin.com/posts/jeff-mcveigh-705b885_collaborating-with-customers-and-competitors-activity-7351767882353029123-HMR3[July 2025 gathering]
 * https://www.linkedin.com/posts/jeff-mcveigh-705b885_amd-intel-x86-activity-7289797380386799616-wA9v[January 2025 gathering]
 
 My research has generated or influenced hardware and software security architectures deployed on a large proportion of computer systems in use today.
 
-I have contributed to shipping processor security technologies, including https://www.forbes.com/sites/tonybradley/2020/06/17/intel-cet-raises-the-bar-for-malware-defense/[Control-Flow Enforcement Technology (CET)] and https://www.pcworld.com/article/619047/intels-12th-gen-vpro-chips-now-actively-fight-ransomware-supply-chain-attacks.html[VT-Redirect Protection (VT-rp)]. Such technologies are important for https://www.intel.com/content/www/us/en/security/security-practices/blogs/software-robustness-when-ai-finds-the-bugs.html[mitigating AI-generated exploits].
+I have contributed to shipping processor security technologies, including https://web.archive.org/web/20250722104720/https://www.forbes.com/sites/tonybradley/2020/06/17/intel-cet-raises-the-bar-for-malware-defense/[Control-Flow Enforcement Technology (CET)] and https://www.pcworld.com/article/619047/intels-12th-gen-vpro-chips-now-actively-fight-ransomware-supply-chain-attacks.html[VT-Redirect Protection (VT-rp)]. Such technologies are important for https://www.intel.com/content/www/us/en/security/security-practices/blogs/software-robustness-when-ai-finds-the-bugs.html[mitigating AI-generated exploits].
 
 I was Principal Investigator for https://web.archive.org/web/20240917132526/https://www.intel.com/content/www/us/en/newsroom/news/intel-and-ucsd-join-darpa-cyberdefense-program.html[Intel's project on Cryptographic Capability Computing (C3)] in the https://www.darpa.mil/news-events/2022-10-13[DARPA HARDEN program].
 
@@ -82,7 +82,7 @@ UWEC Outstanding CS Senior of the Year, 2005. Karlgaard Scholarship. Summa cum l
 
 * 2025: https://popl25.sigplan.org/home/prisc-2025[Workshop on Principles of Secure Compilation (PriSC), associated with POPL 2025]
 * 2011: https://web.archive.org/web/20120208151748/http://www.trust2011.org/index.php?p=1_2_Committees[International Conference on Trust & Trustworthy Computing (TRUST)]
-* 2010: https://web.archive.org/web/20120302035702/http://www.trust2010.org/programcommittee.html[International Conference on Trust & Trustworthy Computing (TRUST)]
+* 2010: https://web.archive.org/web/20121115011000/http://www.trust2010.org/programcommittee.html[International Conference on Trust & Trustworthy Computing (TRUST)]
 
 == Mentoring
 
@@ -92,11 +92,11 @@ UWEC Outstanding CS Senior of the Year, 2005. Karlgaard Scholarship. Summa cum l
 * 2020–present: High schooler and author of an introductory book on cryptography. https://www.kgw.com/article/news/local/beaverton-student-publishes-book-on-cryptography/283-b00c6f67-79c5-4d60-990a-6e43ae94f863[TV interview].
 * 2019–2022: Intel liaison (eventually lead Intel liaison) for the DARPA-sponsored https://conix.io[SRC JUMP CONIX] center.
 * 2018–present: Multiple mentees inside Intel.
-* 2013: USAFA students on https://apps.dtic.mil/sti/tr/pdf/ADA591718.pdf[innovative usages for Intel VT-x].
+* 2013: USAFA students on https://web.archive.org/web/20250202080656/https://apps.dtic.mil/sti/tr/pdf/ADA591718.pdf[innovative usages for Intel VT-x].
 
 == Volunteering
 
-* Computer Science Category Judge at the 2020–2023 http://beavhillsciexpo.weebly.com/[NWSE Beaverton Hillsboro Science Expo]
+* Computer Science Category Judge at the 2020–2023 https://web.archive.org/web/20201127033136/http://beavhillsciexpo.weebly.com/[NWSE Beaverton Hillsboro Science Expo]
 
 == Favorite resources
 
